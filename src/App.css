@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.products {
+    margin: 20px;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .products__single {
+    width: 18rem;
+    height: 20rem;
+    list-style: none;
+    padding: 0px 0px 20px;
+    background-color: rgb(152, 171, 202);
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer; /* Imp on clickables */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .products__single > img{
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+    margin-bottom: 3px;
   }
-}
+  
+  .pagination {
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination > span{
+    padding: 15px 20px;
+    border: 1px solid gray;
+    cursor: pointer;
+  }
+  .pagination > span:hover{
+    background-color: rgb(222, 181, 235);
+  }
+
+  .pagination__disable{
+    opacity: 0;
+  }
+  
+  .pagination__selected{
+    background-color: rgb(222, 181, 235);
+  }
